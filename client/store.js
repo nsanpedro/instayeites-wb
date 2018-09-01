@@ -1,4 +1,4 @@
-import { creteStore, compose } from 'redux';
+import { createStore, compose } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 
@@ -17,7 +17,7 @@ const defaultState = {
   comments
 };
 
-const store = creteStore(rootReducer, defaultState);
+const store = createStore(rootReducer, defaultState);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
